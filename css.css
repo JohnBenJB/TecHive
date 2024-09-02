@@ -1,0 +1,476 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding-top: 60px;
+}
+
+/* Flexbox Utility */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive Images */
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Typography */
+h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+nav .logo img {
+    height: 50px;
+    max-width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.5s;
+}
+
+nav a:hover {
+    color: #26f048;
+}
+
+/* Hamburger Menu (for mobile view) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Dropdown Menu Style */
+nav ul.active {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #000;
+    width: 200px;
+    text-align: right;
+    border-radius: 5px;
+    padding: 10px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    flex-direction: column;
+}
+
+nav ul.active li {
+    margin: 10px 0;
+    padding: 0 10px;
+    text-align: right;
+}
+
+/* Media Queries for Navigation */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav .logo {
+        flex: 1;
+    }
+}
+
+/* Sections Styling */
+section {
+    padding: 40px 20px;
+    margin-top: auto;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Responsive Layout for Service Section */
+.service {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.service img {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    flex: 1 1 100%;
+}
+
+.service-text {
+    width: 100%;
+    flex: 2 1 100%;
+    padding: 20px;
+}
+
+/* Portfolio Section */
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+/* Product Section */
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.product-info,
+.product-video {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+}
+
+.product-video video {
+    width: 100%;
+    height: auto;
+}
+
+/* Team Section */
+.team-member {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.team img {
+    width: 100%;
+    padding: 10px;
+}
+
+.team-text,
+.team-tag {
+    width: 100%;
+    padding: 20px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px;
+}
+
+.footer-links,
+.footer-social,
+.footer-newsletter {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+}
+
+.footer-newsletter form {
+    margin-top: 20px;
+}
+
+.footer-newsletter input {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.footer-newsletter button {
+    background-color: #07b31e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-newsletter button:hover {
+    background-color: #000e02;
+}
+
+/* Media Queries for Footer */
+@media (min-width: 768px) {
+
+    .footer-links,
+    .footer-social,
+    .footer-newsletter {
+        flex-basis: 30%;
+    }
+}
+
+/* Carousel Slider */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: fade 15s infinite;
+    z-index: 1;
+}
+
+.slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.slide:nth-child(3) {
+    animation-delay: 10s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    text-align: right;
+    color: #fff;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    animation: slideIn 1.5s ease-out;
+}
+
+.slide-content h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #12d62c;
+}
+
+.slide-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Testimonial Section */
+.testimonial-slider {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    text-align: center;
+}
+
+.testimonial-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.testimonial-image {
+    width: 30%;
+    height: 40%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+cite {
+    display: inline-block;
+    text-align: center;
+}
+
+cite span {
+    display: block;
+}
+
+.testimonial-slider blockquote {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Contact Section */
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#contact h2 {
+    margin-bottom: 10px;
+}
+
+#contact p {
+    margin-bottom: 20px;
+}
+
+.contact-form-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 0 auto 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #07b31e;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+}
+
+button:hover {
+    background-color: #000e02;
+    color: #26f048;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    /* Add mobile-specific styles here */
+}
+
+@media (min-width: 769px) {
+    /* Add desktop-specific styles here */
+}
