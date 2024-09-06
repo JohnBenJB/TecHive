@@ -18,7 +18,7 @@ Technologies Used
 
 - HTML
 - CSS
-- JavaScript (optional)
+- JavaScript
 
 Design
 
@@ -28,9 +28,9 @@ Design
 
 Development
 
-- Built using HTML, CSS, and JavaScript (if applicable)
+- Built using HTML, CSS, and JavaScript
 - Tested on various browsers and devices
 
 Contributing
 
-- If you'd like to contribute to the development or design of this website, please contact us at [insert contact email].
+- If you'd like to contribute to the development or design of this website, please contact us at [jchisomb@gmail.com].
